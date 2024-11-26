@@ -1,0 +1,22 @@
+<div id="booksList">
+  <h1>Liste des livres</h1>
+  <ul>
+   
+    <li *ngFor="let book of books" (click)="selectBook(book._id || '')">
+      {{ book.title }}
+      <div class="book-info">
+      </div>
+      <app-book-detail *ngIf="selectedBookId === book._id" class="bookDetails" [bookId]="selectedBookId"></app-book-detail>
+    </li>
+    
+  </ul>
+  
+  
+  <div class="pagination">
+    <button (click)="changePage(-1)" [disabled]="currentPage <= 1">Précédent</button>
+    <span>{{ currentPage }} / {{ totalPages }}</span>
+    <button (click)="changePage(1)" [disabled]="currentPage >= totalPages">Suivant</button>
+  </div>
+</div>
+
+

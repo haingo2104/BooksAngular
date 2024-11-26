@@ -1,0 +1,29 @@
+<div class="formulaire">
+    <h1>Ajouter un Livre</h1>
+    <div class="modal" *ngIf="successMessageVisible">
+        <div class="modal-content">
+          <p>Le livre a été ajouté avec succès !</p>
+        </div>
+      </div>
+    <form [formGroup]="bookForm" (ngSubmit)="handleSubmit()">
+        <div>
+            <label for="title">Titre :</label>
+            <input type="text" id="title" formControlName="title" required>
+        </div>
+        <div>
+            <label for="author">Auteur :</label>
+            <input type="text" id="author" formControlName="author" required>
+        </div>
+        <div>
+            <label for="publicationYear">Date de publication :</label>
+            <input type="date" id="publicationYear" formControlName="publicationYear" required>
+        </div>
+        <button type="submit">Enregistrer</button>
+    </form>
+    <div id="successModal" class="modal" style="display:none;">
+        <div class="modal-content">
+            <p>Ajout réussi !</p>
+            <button id="closeModalButton">Fermer</button>
+        </div>
+    </div>
+</div>

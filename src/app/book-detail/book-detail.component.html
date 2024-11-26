@@ -1,0 +1,5 @@
+<div *ngIf="bookDetails" class="bookDetails">
+  <p><strong>Titre : {{ bookDetails?.title }}</strong></p>
+  <p><strong>Auteur : {{ bookDetails?.author }}</strong></p>
+  <p><strong>Date de publication : {{ bookDetails?.publicationYear | date:'yyyy' }}</strong></p>
+</div>

@@ -1,0 +1,80 @@
+#booksList {
+    /* margin: 20px auto; */
+    padding: 20px;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    list-style-type: none;
+   
+    /* background-color: aliceblue; */
+}
+
+#booksList li {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    flex-direction: row; 
+}
+
+#booksList li .book-info {
+    display: flex;
+    flex: 1;
+    justify-content: space-between; 
+    align-items: flex-start;
+    width: 100%;
+}
+
+#booksList li .book-details {
+    margin-left: 20px; 
+    background-color: #fffb1b;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    width: 40%; 
+}
+
+#booksList li:hover {
+    background-color: #f1f1f1;
+    transform: translateY(-4px); 
+}
+
+.pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #0e470898;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.pagination button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #154710;
+}
+
+.liste {
+    background-color: aliceblue;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #4a4a4a;
+    text-align: center;
+}
